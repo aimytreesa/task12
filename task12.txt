@@ -1,0 +1,61 @@
+Step 1: Start a Free VM in your Cloud Account
+
+    Log in to your cloud provider account (AWS/GCP/Azure).
+    Navigate to the service for creating virtual machines.
+    Choose the free tier option or any other free offering available.
+    Follow the prompts to configure your VM, including selecting the operating system (preferably Linux).
+    Note down the details of your VM such as IP address, username, and password.
+
+Step 2: SSH into Your VM
+
+    Open your Kali Linux terminal.
+    Use the ssh command to connect to your VM using the provided IP address, username, and password.
+    Once connected, you should see a command prompt indicating successful SSH access.
+     
+Step 3: Clone Your Repo
+
+    Use the git clone command to clone your repository from TaskTen where you created an HTML page.
+    Navigate to the cloned folder.
+
+Step 4: Copy Files to Apache Root Folder
+
+    Use the cp command to copy the files from the cloned folder to the root folder of the Apache web server. The root folder is typically /var/www/html.
+
+Step 5: Start Apache Web Server
+
+    Use the appropriate command to start the Apache web server. This might vary depending on the Linux distribution, but common commands include sudo service apache2 start or sudo systemctl start apache2.
+
+Step 6: Access the Web Page
+
+    Open a web browser on your local machine.
+    Enter the public IP address of your cloud VM in the address bar.
+    You should see your web page displayed.
+
+Step 7: Install PHP and MySQL
+
+    Use the package manager of your Linux distribution to install PHP and MySQL if they are not already installed. For example, on Debian-based systems, you can use 
+    sudo apt-get install php mysql-server.
+
+Step 8: Start MySQL Server
+    
+    Use the appropriate command to start the MySQL server. 
+    sudo service mysql start or sudo systemctl start mysql.
+
+Step 9: Create Database, Table, and User
+
+    Log in to the MySQL server using the mysql command-line client.
+    Create a new database using the CREATE DATABASE command.
+    Create a table within the database using the CREATE TABLE command.
+    Create a new user and grant privileges on the database using the CREATE USER and GRANT commands.
+
+Step 10: Create/Register User with PHP
+
+    Write PHP scripts to create a registration form and process user registration data.
+    Use PHP to connect to the MySQL database and insert user data into the appropriate table.
+
+Step 11: Login as the Created User
+
+    Write PHP scripts to create a login form and process user login data.
+    Use PHP to authenticate user credentials against the database table you created earlier.
+
+Public ip=20.244.34.199
